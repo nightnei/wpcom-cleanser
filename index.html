@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DotComCleanser</title>
+    <style>
+      body {
+        width: 500px;
+        height: 520px;
+        margin: 0;
+        padding: 15px;
+        font-family: Arial, sans-serif;
+        color: #000;
+      }
+
+      .page_wrapper {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative; /* for "Settings" dropdown */
+      }
+
+      .page-loader {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 100%;
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .page-header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #333436;
+      }
+
+      .page-header__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .page-header__title {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      .page-header__button {
+        margin-left: 10px;
+        font-size: 12px;
+        color: #5543b0;
+        cursor: pointer;
+      }
+
+      .page-header__dropdown {
+        display: none;
+
+        position: absolute;
+        z-index: 2;
+        background: #fff;
+        height: 100%;
+        width: 100%;
+      }
+
+      .page-header__dropdown.page-header__dropdown--is-open {
+        display: block;
+      }
+
+      .page-header__label {
+        font-size: 13px;
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+      }
+
+      .page-header__input {
+        width: 100%;
+        margin-top: 5px;
+        box-sizing: border-box;
+      }
+
+      .page-header__hint {
+        font-size: 12px;
+        color: #666;
+        margin-top: 3px;
+        font-weight: normal;
+      }
+
+      .page-header__error {
+        color: #f00;
+      }
+
+      .page-header__dropdown-btns {
+        margin-top: 10px;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+        padding: 15px 0;
+      }
+
+      /* CONTENT */
+      .page-content {
+        flex: 1;
+        overflow: auto;
+      }
+
+      .products__you-are-all-set img {
+        width: 100%;
+      }
+
+      .products__you-are-all-set-text {
+        margin-top: -90px;
+        text-align: center;
+        font-size: 16px;
+        padding: 15px 0;
+      }
+
+      .products__h2 {
+        margin: 20px 0 5px 0;
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      .products__item {
+        border-bottom: 1px solid #868b92;
+        padding: 5px 4px;
+        position: relative;
+      }
+
+      .products__item--removing {
+        background: #dba64e;
+      }
+
+      .products__item--removing::before {
+        content: 'Removing...';
+        color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+      }
+
+      .products__item--removed {
+        background: #0f0;
+      }
+
+      .products__item--removed::before {
+        content: 'Removed!';
+        color: #fff;
+        font-size: 17px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+      }
+
+      .products__item--error {
+        background: #f00;
+      }
+
+      .products__item--error::before {
+        content: 'Error! Try a big later.';
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translate(0, -50%);
+      }
+
+      .products__item-name {
+        font-size: 14px;
+        color: #444;
+        font-weight: bold;
+      }
+
+      .products__item-description {
+        font-size: 12px;
+        color: #999;
+      }
+
+
+      /* CONTROLS */
+      .page-controls {
+        padding: 10px 0;
+        border-bottom: 1px solid #333436;
+      }
+
+      .page-controls:empty {
+        display: none;
+      }
+
+      .page-controls .progress-info {
+        font-size: 14px;
+        padding: 0 4px;
+      }
+
+      .page-controls label {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 10px;
+      }
+
+      .page-controls .btn-remove {
+        margin: 5px 0 0 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page_wrapper">
+      <header class="page-header">
+        <div class="page-header__inner">
+          <div class="page-header__title">WPcom Cleanser</div>
+          <div class="page-header__buttons">
+            <div class="page-header__button btn-toggle-settings">Settings</div>
+          </div>
+        </div>
+        <div class="page-header__dropdown">
+          <div class="page-header__dropdown-content"></div>
+          <div class="page-header__dropdown-btns"></div>
+        </div>
+      </header>
+      <div class="page-controls"></div>
+      <div class="page-content"></div>
+    </div>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
