@@ -51,8 +51,10 @@ export const refreshApp = async () => {
     agencyDashboardSites = [];
   try {
     const myAgencyInfo = await fetchMyAgencyInfo();
-    myAgencyId = myAgencyInfo[0].id;
-    agencyDashboardSites = await fetchAgencyDashboardSites(myAgencyId);
+    if (myAgencyInfo) {
+      myAgencyId = myAgencyInfo[0].id;
+      agencyDashboardSites = await fetchAgencyDashboardSites(myAgencyId);
+    }
   } catch (error) {
     let text;
     if (error.message === 'authorization_a4a_not_valid') {
