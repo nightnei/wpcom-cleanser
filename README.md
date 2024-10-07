@@ -14,7 +14,7 @@ It's a browser extension created specifically for WordPress.com Code Wranglers. 
 </table>
 
 ## Features
-1. Cancel subscription and remove them (https://wordpress.com/me/purchases).
+1. Cancel subscriptions and remove them (https://wordpress.com/me/purchases).
 At the moment we support only:
     - Domain registration
     - Wordpress.com plans
@@ -36,12 +36,15 @@ git clone git@github.com:nightnei/wpcom-cleanser.git
 
 ## Usage Instructions
 1. Open the Extension: Click the "WPcom Cleanser" icon in your Chrome toolbar
-2. Click on the "Settings" button in the top right corner and follow teh instructions for "Authorization header"
+2. Click on the "Settings" button in the top right corner and follow the instructions for "Authorization header"
 <img src="./imgs/readme/authorizationHeader.png" />
 3. Click "Save settings"
 4. Have fun!
 
 ## Troubleshooting & Notes
-1. Sometimes you can encounter errors with A4A sites deletion. It's expected, since deleteion of their plans takes some time at the backend. Just try to delete them again in 1-2 minutes.
-2. If you see some issues or need some functionality - feel free to create a branch with proposed changes or add an issue to this repo.
-3. Any questions - menthiuon me (@nightnei) here ort in Slack.
+1. Sometimes you can encounter errors with A4A sites deletion. It's expected, since deletion of their plans takes some time at the backend. Just try to delete them again in 1-2 minutes.
+2. The extension removes items sequentially, so keep it open until the process completes. This approach avoids overloading our servers. We may later rewrite it to send all requests simultaneously.
+
+## Contacts
+If you encounter issues or need new functionality, create a branch with proposed changes or add an issue to this repo.
+For questions, mention me (@nightnei) here or on Slack.
