@@ -16,12 +16,13 @@ It's a browser extension created specifically for A12S. This tool simplifies the
 ## Features
 1. Cancel subscriptions and remove them (https://wordpress.com/me/purchases).
 At the moment we support only:
-    - Domain registration
-    - Wordpress.com plans
-    - Titan
-    - Google Workspace
-2. Delete sites (https://wordpress.com/sites)
-3. Remove A4A sites from dashboard (https://agencies.automattic.com/sites)
+    - Purchases made with Free credits(Refund is not implemented):
+        - Domain registration
+        - Wordpress.com plans
+        - Titan
+        - Google Workspace
+3. Delete sites (https://wordpress.com/sites)
+4. Remove A4A sites from dashboard (https://agencies.automattic.com/sites)
 
 ## Installation
 Follow these steps to set up WPcom Cleanser:
