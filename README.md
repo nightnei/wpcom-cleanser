@@ -4,7 +4,7 @@
 
 <h1 align="center">WPcom Cleanser</h1>
 
-It's a browser extension created specifically for WordPress.com Code Wranglers. This tool simplifies the process of cleaning up websites, different subscriptions, and domains. Previously, developers had to do it manually through the UI, navigating multiple pages, prompts and steps for each item. This extension saves valuable time and dramatically reduces manual work, allowing developers to complete the cleanup with just one button click.
+It's a browser extension created specifically for A12S. This tool simplifies the process of cleaning up websites, different subscriptions, and domains. Previously, developers had to do it manually through the UI, navigating multiple pages, prompts and steps for each item. This extension saves valuable time and dramatically reduces manual work, allowing developers to complete the cleanup with just one button click.
 
 <table>
     <tr>
