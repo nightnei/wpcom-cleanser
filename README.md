@@ -37,7 +37,12 @@ git clone git@github.com:nightnei/wpcom-cleanser.git
 
 ## Usage Instructions
 1. Open the Extension: Click the "WPcom Cleanser" icon in your Chrome toolbar
-2. Click on the "Settings" button in the top right corner and follow the instructions for "Authorization header"<img src="./imgs/readme/authorizationHeader.png" />
+2. Click on the "Settings" button in the top right corner and provide your "Authorization header"<img src="./imgs/readme/authorizationHeader.png" />
+    * Open https://wordpress.com/ in a new tab.
+    * Click on "View -> Developer -> Developer Tools" or press "Ctrl + Shift + I" to open DevTools.
+    * Select "Network" tab.
+    * Reload the page.
+    * <img src="./imgs/readme/devtools.png" style="width: 100%;" />
 3. Click "Save settings"
 4. Have fun!
 

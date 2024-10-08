@@ -29,9 +29,17 @@ export const mountHeader = () => {
 
     const hint = document.createElement('div');
     hint.innerHTML = `
-      Open Network tab of DevTools at https://wordpress.com/ and copy Authorization Header from any request.
+      Open Network tab of DevTools at https://wordpress.com/ and copy Authorization Header from any request
       <br />
-      It's mandatory to have this token to fetch purchases and other info from the API to work with the extension.
+      It's mandatory to have this token to fetch purchases and other info from the API to work with the extension
+      <br />
+      <a
+        href="https://github.com/nightnei/wpcom-cleanser#usage-instructions"
+        target="_blank"
+        style="font-weight: bold"
+      >
+        How to do it?
+      </a>
     `;
     hint.className = 'page-header__hint';
     label.appendChild(hint);
